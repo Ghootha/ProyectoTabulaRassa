@@ -15,26 +15,85 @@ a{
 	padding:10px
 }
 
-div#header h1{
-	height:100px;
-	line-height:100px;
-	margin:0;
-	padding-left:8%;	
-	font-size:300%;
-	color: black
-	
-	
-}
+
+
 div#extra>ul{ background-color: white;}
 div#content p{line-height:1.4}
 div#navigation{background:#E3E3ED;}
 div#extra{background:#E3E3ED;}
 
 div#header{
+	   
+	    
     background:#E3E3ED; 
     border-style:solid;
     border-color:#CACAD4;
+    overflow: hidden;
+    height: 120px;
 }
+div.logoCSH{
+	   position: fixed;
+	   background-image: url("../images/CS_Herediano.png");
+	   background-repeat:no-repeat;
+	   background-size: 68px 68px;
+	   height: 80%;
+	    
+	   width:10%
+	   
+	}
+	div.logoCSH#logo1{
+	  float:left;
+	  
+}
+	div.logoCSH#logo2{
+	  float:right;
+	  right:0px;
+}
+	div#header h1{
+	
+	
+	height:100px;
+	line-height:100px;
+	margin:0;
+	float:left;
+	padding-left:10%;	
+	
+
+ width: 25%
+	font-size:300%;
+	color: black
+}
+
+div.links{ 
+   
+	  display: inline;
+   margin-left: 15%;
+   margin-top: 20px;
+   text-align: center;
+   float: left;
+   border-color: #CACAD4;
+   border-width: thin;
+   border-style: solid;
+}
+
+div.links a{
+	 display:inline;
+	}
+	
+div.login{
+	  display:inline;
+		 float: right;
+		 margin-top: 7%;
+}
+form.formulario{
+	display:inline;
+	
+}
+form.formulario div.divform{
+	display:inline;
+}
+
+
 div#footer p{   
     text-align:right; 
 }
