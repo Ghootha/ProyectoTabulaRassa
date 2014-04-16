@@ -1,0 +1,70 @@
+html,body{
+	margin-top:0,1%;
+	margin-bottom:0,1%;
+	margin-right:2%;
+	margin-left:2%;
+	padding:0,1%
+}
+
+body{
+font: 76% arial,sans-serif}
+p{margin:0 10px 10px}
+a{
+	display:block;
+	color: #981793;
+	padding:10px
+}
+
+div#header h1{
+	height:100px;
+	line-height:100px;
+	margin:0;
+	padding-left:8%;	
+	font-size:300%;
+	color: black
+	
+	
+}
+div#extra>ul{ background-color: white;}
+div#content p{line-height:1.4}
+div#navigation{background:#E3E3ED;}
+div#extra{background:#E3E3ED;}
+
+div#header{
+    background:#E3E3ED; 
+    border-style:solid;
+    border-color:#CACAD4;
+}
+div#footer p{   
+    text-align:right; 
+}
+
+div#footer{
+    padding: 10px 0px 0px 0px;        
+    background:#E3E3ED; 
+    float:left;
+    width:100%;
+}
+
+div#wrapper{float:left;width:100%}
+div#content{margin: 0 200px; box-shadow: 5px 5px 5px #888888;  
+/*background-image:url(../images/cancha.jpg); 
+background-size:100% 100%; 
+background-repeat:no-repeat;*/  
+padding:1px 1px 0px 1px }
+div#navigation{
+	float:left;
+	width:200px;
+	margin-left:-100%
+}
+div#extra{
+	float:left;
+	width:200px;
+	margin-left:-200px
+}
+
+div#navigation>h1{text-align:center;}
+div#extra>h1{text-align:center;}
+
+#fb{ float:left;}
+#tt{ float:left;}

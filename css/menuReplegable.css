@@ -1,0 +1,120 @@
+#MenuNav{
+   
+   margin: 0 auto 20px;
+   border: 1px solid #1F7A99;
+   position: relative;
+   background-color: #1F7A99;
+   font: 16px Tahoma; sans-serif;
+}
+#MenuNav ul{
+   padding: 0;
+   margin: 0% 0.5% 8% 0% ;
+   
+}
+
+#MenuNav ul:after {
+   content: ".";
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;
+    
+}
+
+#MenuNav li {
+   position: relative;
+   float: left;
+   list-style-type: none;
+   margin: 0.4% 0.1% 0.4% 0.4%;
+   background-color: #29A6CF;
+   border-radius:5%; 
+}
+
+#MenuNav li a {
+   display: block;
+   padding: 18px 18px 18px 18px;  
+   color: #FFFFFF;
+   text-decoration: none;
+   
+}
+
+#MenuNav li a:focus {
+   outline: none;
+   text-decoration: underline;
+}
+
+#MenuNav li:first-child a {
+   border-left: none;
+}
+#MenuNavli.ultimo a {
+   border-right: none;
+}
+
+#MenuNav li:hover ul {
+   display: block;
+}
+
+#MenuNav a span{
+    display: block;
+    float: right;
+    margin-left: 5px;
+}
+#MenuNav ul ul{
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: #FFFFFF;
+}
+#MenuNav ul ul li{
+    float: none;
+}
+#MenuNav ul ul a{
+    padding: 5px 10px;
+    border-left: none;
+    border-right: none;
+    font-size: 14px;
+}
+#MenuNav ul ul a:hover; {
+    background-color: #FBE080;
+    
+}
+
+#MenuNav {
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(,0,0,0.75);
+    background-image: -moz-linear-gradient(#D1F0FF,#B2E6FF,#94DBFF, #52A3CC, #52A3CC);  
+}
+
+#MenuNav li:hover {    
+    background-image: -moz-linear-gradient(0% 100px 90deg, #A0EA7B, #5CBF3B);    
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#FBE080), to(#999));
+    
+}
+
+#MenuNav ul ul{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow:2px 2px 2px rgba(0,0,0,.8);
+    background-color:white;
+}
+#MenuNav ul ul li{
+    border-left:1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+}
+#MenuNav ul ul a{
+    color: black;
+}
+
+
+#MenuNav ul ul li.ultimo {
+    border-left:1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+}
+#MenuNav ul ul a:hover {
+    background-image: -moz-linear-gradient(0% 100px 90deg, #A0EA7B, #5CBF3B);    
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#FBE080), to(#999));
+}

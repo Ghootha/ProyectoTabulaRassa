@@ -1,0 +1,114 @@
+#MenuNavIzq{   
+   margin: 0 auto 20px;  
+   position: relative;  
+   font: 16px Tahoma; sans-serif;
+   background-image: white; 
+}
+#MenuNavIzq ul{
+   padding: 0;
+   margin: 15% 1% 3% 1% ;
+   
+}
+
+#MenuNavIzq ul:after {
+   content: ".";
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;
+    
+}
+
+#MenuNavIzq li {
+   position: relative;
+   float: left;
+   list-style-type: none;
+   margin: 0.6%;
+   background-color: 	#F0F5F5;
+   border-radius:5%; 
+}
+
+#MenuNavIzq li a {
+   display: block;
+   padding: 4% 98% 4% 4%;  
+   color: black;
+   text-decoration: none;
+   
+}
+
+#MenuNavIzq li a:focus {
+   outline: none;
+   text-decoration: underline;
+}
+
+#MenuNavIzq li:first-child a {
+   border-left: none;
+}
+#MenuNavIzq.ultimo a {
+   border-right: none;
+}
+
+#MenuNavIzq li:hover ul {
+   display: block;
+}
+
+#MenuNavIzq a span{
+    display: block;
+    float: right;
+    margin-left: 5px;
+}
+#MenuNavIzq ul ul{
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: #FFFFFF;
+}
+#MenuNavIzq ul ul li{
+    float: none;
+}
+#MenuNavIzq ul ul a{
+    padding: 5px 10px;
+    border-left: none;
+    border-right: none;
+    font-size: 14px;
+}
+#MenuNavIzq ul ul a:hover; {
+    background-color: #FBE080;    
+}
+
+#MenuNavIzq li:hover {    
+    background-image: -moz-linear-gradient(0% 100px 90deg, #A0EA7B, #5CBF3B);    
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#FBE080), to(#999));
+    
+}
+
+#MenuNavIzq ul ul{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;    
+    box-shadow:2px 2px 2px rgba(0,0,0,.8);
+    background-color:white;
+    left:100%;
+    top:-80%
+    
+}
+#MenuNavIzq ul ul li{
+    border-left:1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+}
+#MenuNavIzq ul ul a{
+    color: black;
+}
+
+
+#MenuNavIzq ul ul li.ultimo {
+    border-left:1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+}
+#MenuNavIzq ul ul a:hover {
+    background-image: -moz-linear-gradient(0% 100px 90deg, #A0EA7B, #5CBF3B);    
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#FBE080), to(#999));
+}
