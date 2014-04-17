@@ -7,7 +7,7 @@ html,body{
 }
 div#chart_div{
     visibility:hidden; top: -60px;
-    margin:-35% 10% 13% 30%; 
+    margin:-37% 10% 13% 30%; 
 }
 
 body{
@@ -87,7 +87,7 @@ div.login{
 
 
 div#footer{
-    margin: -10% 0% 0% 0%;
+    margin: -8.4% 0% 0% 0%;
     padding: 1% 0% 0% 0%;        
     background:#E3E3ED; 
     float:left;
@@ -106,13 +106,13 @@ div#content{
     
 }
 
-div#tablaCampeonato{
+div#panelView{
     background-image:url(../images/cancha.jpg); 
     background-size:100% 100%; 
     background-repeat:no-repeat;   
     padding:19% 30% 19% 1%;        
-    margin-top:-1.5%;
-    margin-bottom:12.4% 
+    margin-top:-2%;
+    margin-bottom:1% 
 }
 
 div#navigation{

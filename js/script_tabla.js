@@ -9,7 +9,7 @@
 		 var iniciaCampeonato=doc.getElementById("ver");
 		 var verClasificados=doc.getElementById("clasificados");
 		 var verDescienden=doc.getElementById("descienden");
-		 var cancha=doc.getElementById("tablaCampeonato");
+		 var cancha=doc.getElementById("panelView");
 		 
    
 		 
