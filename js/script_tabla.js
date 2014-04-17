@@ -10,12 +10,12 @@
 		 var verClasificados=doc.getElementById("clasificados");
 		 var verDescienden=doc.getElementById("descienden");
 		 var cancha=doc.getElementById("tablaCampeonato");
-		 
+		 var divGraf2=doc.getElementById('chart_div');
    
 		 
 		 iniciaCampeonato.onclick=function(e){
 		 cancha.style.background="#B8E65C";
-		 
+		 divGraf2.style.visibility="hidden";
 		 // Accedemos la tabla
 		 var table= doc.getElementById("data");
 		 // La hacemos visible
