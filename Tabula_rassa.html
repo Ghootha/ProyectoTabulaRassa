@@ -9,7 +9,9 @@
 	<link rel="stylesheet" href="css/tableStyle.css" />
 	
 	<script src="js/script_json.js"	type="text/javascript">	</script>
-	<script src="js/script_tabla.js" type="text/javascript"> </script>
+	<script src="js/script_tabla.js" type="text/javascript"> </script>	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="js/script_Grafica.js" type="text/javascript"> </script>
 	
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -101,9 +103,9 @@
 							<td>Pt</td>
 						</thead><br/>
 						<tbody></tbody>
-					</table>    
-					
-					</div>
+					</table>						
+				    </div>
+					 <div id="chart_div"></div>
 				</div>
 			</div>
 			<div id="navigation">
@@ -119,7 +121,7 @@
 							</li>
 							<li><a href="#" title="Menu 2Der">Graficas</a>
 								<ul>
-									<li><a href="#" title="SubMenu 4Izq">Generar</a></li>
+									<li id="generaGrafica" ><a  href="#" title="SubMenu 4Izq">Generar</a></li>
 									<li><a href="#" title="SubMenu 5Izq">Crear</a></li>
 									<li><a href="#" title="SubMenu 6Izq">Modificar</a></li>
 									<li class="ultimo"><a href="#" title="SubMenu 4">Eliminar</a></li>

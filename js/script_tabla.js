@@ -90,6 +90,18 @@
 		 
 		 }
 		 }
+		 
+		 var genGrafica=doc.getElementById("generaGrafica");
+		 var divGraf=doc.getElementById('chart_div');
+		 genGrafica.onclick=function(e){
+		 var table= doc.getElementById("data");
+		 table.style.visibility="hidden";
+		 cancha.style.background="#B8E65C";		 
+		 
+	     
+		 divGraf.style.visibility="visible";
+		 }
+		 
 	}
 		var cont=0;
 		 var row1;
