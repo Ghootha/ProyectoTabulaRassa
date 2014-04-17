@@ -1,0 +1,107 @@
+
+table#data {
+    width:400%;
+    font-family:Arial, Helvetica, sans-serif; 
+    text-align:center;
+    margin-left: 39%; 
+    margin-top: -25%;
+    margin-bottom: -600%;
+    visibility:hidden;
+    background:white;
+}
+
+tr, td {
+    text-align:center;
+}
+thead td{
+	    font-family:Arial;font-weight:normal;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;font-weight:bold;text-align:center;
+}
+
+#data tr{
+
+	-o-transition: all 0.4s linear;
+-moz-transition: all 0.4s linear;
+-khtml-transition: all 0.4s linear;
+-webkit-transition: all 0.4s linear;
+-ms-transition: all 0.4s linear;
+transition: all 0.4s linear;
+	}
+#data tr:hover{
+	background-color: #ccc;
+ 
+}
+
+.team , .equipo{
+ text-align:left;
+}
+
+#dialog{ visibility: hidden;}
+
+
+#data td, #data th {
+    font-size:100%;    
+}
+
+#num { 
+	font-family:Arial;
+	font-weight:bold; 
+	padding: 1.5px 6.5px; 
+	border-radius: 10px;
+}
+
+.blue{
+	background-color:#3498db;
+	color:#ffffff;
+	background-clip:content-box;
+}
+
+.black{
+	background-color:#696969;
+	color:#ffffff;
+	background-clip:content-box;
+}
+
+.pts{ 
+	font-weight:bold;
+}
+
+.arrow4 , .arrow9{
+	background-image:url("..//images/FlechaVerde.png");
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+.arrow7 , .arrow8, .arrow8, .arrow10, .arrow11, .arrow12{
+	background-image:url("..//images/FlechaRoja.png");
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+.arrow01 {
+	background-image:url("..//images/FlechaRoja.png");
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+
+.arrow02{
+	background-image:url("..//images/FlechaVerde.png");
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+.arrow00{
+	background-image:none;
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+
+
+
+#numero { 
+	background-color:#D0D0D0;
+	text-align:center; 
+	padding: 12px;
+}
+
+.titulo {
+    font-size:200%;
+    
+    /* CSS3 */
+}

@@ -15,8 +15,6 @@ a{
 	padding:10px
 }
 
-
-
 div#extra>ul{ background-color: white;}
 div#content p{line-height:1.4}
 div#navigation{background:#E3E3ED;}
@@ -32,6 +30,7 @@ div#header{
 }
 div.logoCSH{
     position: absolute;
+    
     background-image: url("../images/CS_Herediano.png");
     background-repeat:no-repeat;
     background-size: 40% 55%;
@@ -90,11 +89,20 @@ div#footer{
 }
 
 div#wrapper{float:left;width:100%}
-div#content{margin: 0 200px; box-shadow: 5px 5px 5px #888888;  
-/*background-image:url(../images/cancha.jpg); 
+div#content{
+margin: 0 200px; 
+box-shadow: 5px 5px 5px #888888;  
+padding:0% 0.% 0% 0% 
+}
+
+div#tablaCampeonato{
+
+box-shadow: 5px 5px 5px #888888;  
+background-image:url(../images/cancha.jpg); 
 background-size:100% 100%; 
-background-repeat:no-repeat;*/  
-padding:1px 1px 0px 1px }
+background-repeat:no-repeat;  
+padding:19% 30% 19% 1%; margin-top:-1.7% }
+
 div#navigation{
 	float:left;
 	width:200px;

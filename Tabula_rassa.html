@@ -6,6 +6,16 @@
 	<link rel="stylesheet" href="css/pageStyle.css" />
 	<link rel="stylesheet" href="css/menuReplegable.css" />
 	<link rel="stylesheet" href="css/menuReplegableIzq.css" />
+	<link rel="stylesheet" href="css/tableStyle.css" />
+	
+	<script src="js/script_json.js"	type="text/javascript">	</script>
+	<script src="js/script_tabla.js" type="text/javascript"> </script>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="jquery-ui-1.10.2.sunny.css" />
+		
 </head>
 	<body>
 		<div id="container">
@@ -38,7 +48,7 @@
 						<ul>
 							<li><a href="#" title="Menu 1">Campeonatos</a>
 								<ul>
-									<li><a href="#" title="SubMenu 1">SubMenu 1</a></li>
+									<li id ="creaCampeonato" ><a href="#" title="SubMenu 1" >Crear</a></li>
 									<li><a href="#" title="SubMenu 2">SubMenu 2</a></li>
 									<li><a href="#" title="SubMenu 3">SubMenu 3</a></li>
 									<li class="ultimo"><a href="#" title="SubMenu 4">SubMenu 4</a></li>
@@ -69,12 +79,31 @@
 									</ul>						
 						</li>						
 						</ul>
-					</nav>		
+					</nav>
 					
-					<p><strong>1) Content here.</strong> column long long column very long fill fill fill long text text column text silly very make long very fill silly make make long make text fill very long text column silly silly very column long very column filler fill long make filler long silly very long silly silly silly long filler make column filler make silly long long fill very.</p>
-					<p>very make make fill silly long long filler column long make silly silly column filler fill fill very filler text fill filler column make fill make text very make make very fill fill long make very filler column very long very filler silly very make filler silly make make column column </p>
-					<p>fill long make long text very make long fill column make text very silly column filler silly text fill text filler filler filler make make make make text filler fill column filler make silly make text text fill make very filler column very </p>
-					<p>column text long column make silly long text filler silly very very very long filler fill very fill silly very make make filler text filler text make silly text text long fill fill make text fill long text very silly long long filler filler fill silly long make column make silly long column long make very </p>
+					<div id="tablaCampeonato">
+						<table id="data" class="tg" style="table-layout: fixed; width: 574px">
+						<caption> <span class="titulo">Tabla de posiciones campeonato nacional</span>
+
+						</caption>
+					  
+						<thead id="datah">
+							<td id="numero">#</td>
+							<td>  </td>
+							<td class="equipo" colspan="5">Equipo</td>
+							<td>PJ</td>
+							<td>PG</td>
+							<td>PE</td>
+							<td>PP</td>
+							<td>GF</td>
+							<td>GC</td>
+							<td>DG</td>
+							<td>Pt</td>
+						</thead><br/>
+						<tbody></tbody>
+					</table>    
+					
+					</div>
 				</div>
 			</div>
 			<div id="navigation">
@@ -113,7 +142,16 @@
 									</ul>						
 						</li>						
 						</ul>
-					</nav>		
+					</nav>
+					
+					<div id="dialog" title="Inserte resultado">	
+					<label id="t1" for="marcador1"></label>
+					<input type="text" id="marcador1" value="" />
+					<label id="t2" for="marcador2"></label>
+					<input type="text" id="marcador2" value="" />		
+	</div>
+
+						
 				
 			</div>
 			<div id="extra">

@@ -1,0 +1,141 @@
+{
+  "results":
+	{
+	
+	 "teams":[
+	 
+	 {
+	  "team": "Herediano",
+	  "PJ":12,
+	  "PG":8,
+	  "PE":2,
+	  "PP":2,
+	  "GF":25,
+	  "GC":10,
+	  "DG":15,
+ 	  "Pt":25
+	 },
+	 {
+	  "team": "Alajuelense",
+	  "PJ":8,
+      "PG":5,
+      "PE":1,
+      "PP":2,
+      "GF":14,
+      "GC":5,
+      "DG":9,
+      "Pt":16
+	 },
+	 
+	 {
+	  "team": "Deportivo Saprissa",
+	  "PJ":8,
+      "PG":4,
+      "PE":3,
+      "PP":1,
+      "GF":17,
+      "GC":10,
+      "DG":7,
+      "Pt":15
+	 },
+	 {
+	  "team": "Limon",
+	  "PJ":8,
+      "PG":4,
+      "PE":2,
+      "PP":2,
+      "GF":10,
+      "GC":9,
+      "DG":1,
+      "Pt":14
+	 },
+	 {
+	  "team": "Santos de Guapiles",
+	  "PJ":9,
+      "PG":3,
+      "PE":4,
+      "PP":2,
+      "GF":12,
+      "GC":11,
+      "DG":1,
+      "Pt":13
+	 },
+	 {
+	  "team": "UCR",
+	  "PJ":9,
+      "PG":4,
+      "PE":1,
+      "PP":4,
+      "GF":12,
+      "GC":13,
+      "DG":1,
+      "Pt":13
+	 },
+	 {
+	  "team" : "Cartagines",
+	  "PJ":8,
+      "PG":3,
+      "PE":3,
+      "PP":2,
+      "GF":8,
+      "GC":8,
+      "DG":0,
+      "Pt":12
+	 },
+	 {
+	  "team" : "Carmelita",
+	  "PJ":8,
+      "PG":3,
+      "PE":1,
+      "PP":4,
+      "GF":12,
+      "GC":14,
+      "DG":2,
+      "Pt":10
+	 },
+	 {
+	  "team" : "Belen Siglo XXI",
+	  "PJ":8,
+      "PG":2,
+      "PE":2,
+      "PP":4,
+      "GF":9,
+      "GC":15,
+      "DG":6,
+      "Pt":8
+	 },
+     {
+	  "team" : "Puntarenas",
+	  "PJ":8,
+      "PG":2,
+      "PE":1,
+      "PP":5,
+      "GF":11,
+      "GC":16,
+      "DG":5,
+      "Pt":7
+	 },
+     {
+	  "team" : "Uruguay",
+	  "PJ":8,
+      "PG":1,
+      "PE":2,
+      "PP":5,
+      "GF":8,
+      "GC":15,
+      "DG":7,
+      "Pt":5
+	 },
+     {
+	  "team" : "Perez Zeledon",
+	  "PJ":9,
+      "PG":1,
+      "PE":2,
+      "PP":6,
+      "GF":8,
+      "GC":19,
+      "DG":11,
+      "Pt":5
+	 }	 
+	]}
+}
