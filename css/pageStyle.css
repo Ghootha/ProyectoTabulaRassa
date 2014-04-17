@@ -6,9 +6,10 @@ html,body{
 	padding:0,1%
 }
 div#chart_div{
-    visibility:hidden; top: -60px;
+    visibility:hidden; top: -10px;
     margin:-37% 10% 13% 30%; 
 }
+
 
 body{
 font: 76% arial,sans-serif}
@@ -19,6 +20,11 @@ a{
 	padding:10px
 }
 
+table#data.tg{
+    margin:-29.5% 0% -26.5% 21%
+    
+    
+}
 div#extra>ul{ background-color: white;}
 div#content p{line-height:1.4}
 div#navigation{background:#E3E3ED;}
