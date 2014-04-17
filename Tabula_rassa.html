@@ -35,9 +35,9 @@
 									   
 								<form>
 									<label for="username">Correo:</label>
-									<input type="text" id="username" name="username">
+									<input type="text" id="username" name="username" size="6">
 									<label for="password">Contraseña:</label>
-									<input type="password" id="password" name="password">
+									<input type="password" id="password" name="password" size="6">
 									<input type="submit" value="Entrar">	
 										
 								</form>														
@@ -92,15 +92,15 @@
 						<thead id="datah">
 							<td id="numero">#</td>
 							<td>  </td>
-							<td class="equipo" colspan="5">Equipo</td>
-							<td>PJ</td>
-							<td>PG</td>
-							<td>PE</td>
-							<td>PP</td>
-							<td>GF</td>
-							<td>GC</td>
-							<td>DG</td>
-							<td>Pt</td>
+							<td id="equipo" colspan="5">Equipo</td>
+							<td id="columna" onclick="ordenColumna(this)">PJ</td>
+							<td id="columna" onclick="ordenColumna(this)">PG</td>
+							<td id="columna" onclick="ordenColumna(this)">PE</td>
+							<td id="columna" onclick="ordenColumna(this)">PP</td>
+							<td id="columna" onclick="ordenColumna(this)">GF</td>
+							<td id="columna" onclick="ordenColumna(this)">GC</td>
+							<td id="columna" onclick="ordenColumna(this)">DG</td>
+							<td id="columna" onclick="ordenColumna(this)">Pt</td>
 						</thead><br/>
 						<tbody></tbody>
 					</table>						
@@ -114,9 +114,9 @@
 						<ul>
 							<li><a href="#" title="Menu 1Izq">Tabla</a>
 								<ul>
-									<li><a href="#" title="SubMenu 1Izq">Ver</a></li>
-									<li><a href="#" title="SubMenu 2Izq">Clasificados</a></li>									
-									<li class="ultimo"><a href="#" title="SubMenu 4">Descienden</a></li>
+									<li id="ver"><a href="#" title="SubMenu 1Izq">Ver</a></li>
+									<li id="clasificados"><a href="#" title="SubMenu 2Izq">Clasificados</a></li>									
+									<li id="descienden" class="ultimo"><a href="#" title="SubMenu 4">Descienden</a></li>
 								</ul>	
 							</li>
 							<li><a href="#" title="Menu 2Der">Graficas</a>

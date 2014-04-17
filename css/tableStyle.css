@@ -105,3 +105,12 @@ transition: all 0.4s linear;
     
     /* CSS3 */
 }
+
+.hidden{
+			
+			display:none;
+	}
+	
+	.visible{
+				visibility: visible;
+		}

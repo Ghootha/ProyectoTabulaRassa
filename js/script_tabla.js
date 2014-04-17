@@ -6,8 +6,12 @@
 	  var JSON_DATA_URL="json/teams.json";
 	   window.onload= function(e){		 
 	     var doc = document;
-		 var iniciaCampeonato=doc.getElementById("creaCampeonato");
+		 var iniciaCampeonato=doc.getElementById("ver");
+		 var verClasificados=doc.getElementById("clasificados");
+		 var verDescienden=doc.getElementById("descienden");
 		 var cancha=doc.getElementById("tablaCampeonato");
+		 
+   
 		 
 		 iniciaCampeonato.onclick=function(e){
 		 cancha.style.background="#B8E65C";
@@ -37,6 +41,7 @@
 		 // Ponemos un caption tomando su valor del JSON
 		 if(!table.caption){
 		   var cap = doc.createElement("caption");
+		   
 		   cap.innerHTML=data.results.title; //la propiedad innerHTML permite insertar html en el elemento
 		   table.appendChild(cap);
 		 }
@@ -91,6 +96,11 @@
 		 }
 		 }
 		 
+		 
+	
+		 
+		 
+		 
 		 var genGrafica=doc.getElementById("generaGrafica");
 		 var divGraf=doc.getElementById('chart_div');
 		 genGrafica.onclick=function(e){
@@ -102,12 +112,61 @@
 		 divGraf.style.visibility="visible";
 		 }
 		 
+		 
+		 		verClasificados.onclick = function(){
+		 			
+	 		 var table= doc.getElementById("data");
+	 		 table.setAttribute("class","visible");
+	 		 var filas = document.getElementById("data").rows;
+	 		 var i = 1; 
+    for(i in filas){
+    	filas[i].setAttribute("class","visible");
+    		 if(i>4){
+								    	filas[i].setAttribute("class","hidden");
+    		 	}
+    	}
+	 		 
+	
+	    }		
+	    
+	    verDescienden.onclick= function(){
+	 		 var table= doc.getElementById("data");
+	 		 table.setAttribute("class","visible");
+	 	  
+	 		 var filas = document.getElementById("data").rows;
+	 		 var i = 1; 
+    for(i in filas){
+    	  filas[i].setAttribute("class","visible");
+    		 if(i<=8 && i!=0){
+								    	filas[i].setAttribute("class","hidden");
+    		 	}
+    	}
+	 		 
+	
+	    }				 
+		 
+		 
 	}
+	
+	
+
+	var ordenColumna=function(col){
+	      var index= col.cellIndex;
+	       //alert("Cell index is: " + col.cellIndex);
+	      sortTable(index);
+	}
+	
+	
+	
+	
 		var cont=0;
 		 var row1;
         document.getElementById("num").onclick=clickTeam= function(row){
 				dialogo(row);
          }
+         
+         	
+
 		 
 		 
 		 function dialogo(row){
@@ -279,16 +338,16 @@
 			empate(goles1,rowS);
 		}
 
-         sortTable();
+         sortTable(10);
 	}
 
-        function sortTable(){
+        function sortTable(index){
     		var tbl = document.getElementById("data").tBodies[0];
     		var store = [];
                 
     		for(var i=0, len=tbl.rows.length; i<len; i++){
         	var row = tbl.rows[i];
-        	var sortnr = parseInt(row.cells[10].textContent || row.cells[10].innerText);
+        	var sortnr = parseInt(row.cells[index].textContent || row.cells[index].innerText);
                 
        		if(!isNaN(sortnr)) store.push([sortnr, row]);
     		}

@@ -78,12 +78,13 @@ div.links a{
 	
 div.login{	  
     float: right;
-    margin: 5% 1% 3% 3%;  
+    margin: 6% 1% 3% 3%; 
+    border-color: #CACAD4;
+    border-width: thin;
+    border-style: solid;
 }
 
-div#footer p{   
-    text-align:right; 
-}
+
 
 div#footer{
     margin: -10% 0% 0% 0%;
@@ -129,5 +130,14 @@ div#extra{
 div#navigation>h1{text-align:center;}
 div#extra>h1{text-align:center;}
 
-#fb{ float:left;}
-#tt{ float:left;}
+div#footer a{
+  display:inline;	
+  width: 30px;
+  float:left;
+	}
+	
+	div#footer p{   
+	 margin-top:18px;
+    display:inline;
+    float:right;
+}
