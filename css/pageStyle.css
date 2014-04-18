@@ -10,6 +10,36 @@ div#chart_div{
     margin:-37% 10% 13% 30%; 
 }
 
+div#dialog{ 
+    height: 304px;
+    font: 145% arial,sans-serif;   
+    margin:-48.4% 0% 12% 1%;
+    background-color: #B8E65C;
+    
+}
+div#dialog1{ 
+    
+    margin:-2.6%
+}
+
+input#marcador1, #marcador2, #marcador3, #marcador4, #marcador5, #marcador6 , #marcador7, #marcador8, #marcador9, #marcador10, #marcador11,#marcador12 {
+    
+    padding:1%;
+    margin-right:4%;
+    margin-top:0.70%;
+    top:%;
+}
+
+label#t1, #t2, #t3, #t4, #t5, #t6 , #t7, #t8, #t9, #t10, #t11,#t12{
+    
+    margin-right:1%;
+    margin-left:11%;
+    padding: 1%;
+    display:inline-block;
+    vertical-align:middle;
+    width:160px;   
+}
+
 
 body{
 font: 76% arial,sans-serif}

@@ -1,7 +1,3 @@
-
-
-
-
 // Ruta de datos en JSON (relativa al HTML)
 	  var JSON_DATA_URL="json/teams.json";
 	   window.onload= function(e){		 
@@ -9,6 +5,8 @@
 		 var iniciaCampeonato=doc.getElementById("ver");
 		 var verClasificados=doc.getElementById("clasificados");
 		 var verDescienden=doc.getElementById("descienden");
+		 var creaJornada=doc.getElementById("creaJornada");
+		 var generaJornada=doc.getElementById("generaJornada");
 		 var cancha=doc.getElementById("panelView");
 		 
    
@@ -103,17 +101,16 @@
 		 
 		 var genGrafica=doc.getElementById("generaGrafica");
 		 var divGraf=doc.getElementById('chart_div');
-		 genGrafica.onclick=function(e){
-		 var table= doc.getElementById("data");
-		 table.style.visibility="hidden";
-		 cancha.style.background="#B8E65C";		 
 		 
-	     
-		 divGraf.style.visibility="visible";
+		 genGrafica.onclick=function(e){
+			 var table= doc.getElementById("data");
+			 table.style.visibility="hidden";
+			 cancha.style.background="#B8E65C";	
+			 divGraf.style.visibility="visible";
 		 }
 		 
 		 
-		 		verClasificados.onclick = function(){
+		 	verClasificados.onclick = function(){
 		 			
 	 		 var table= doc.getElementById("data");
 	 		 table.setAttribute("class","visible");
@@ -144,6 +141,24 @@
 	 		 
 	
 	    }				 
+		 
+		 creaJornada.onclick=function(e){
+		 alert("asdasd");
+		 }
+		 var row1;
+		 
+		 generaJornada.onclick=function(e){
+		 var numAleatorio;var conta=1;
+				var filastabla=document.getElementById("data").rows;
+				for(var i=1; i<13;i++){
+					var numAleatorio;
+					numAleatorio=Math.floor((Math.random()*12)+1);
+					var row=filastabla[numAleatorio];
+					generaJornadaAleatoria(row, conta);
+					conta++;
+				}
+				
+		 }
 		 
 		 
 	}
@@ -179,9 +194,9 @@
 			if(cont==2){
                 var team1=row1.cells[2].innerHTML;
                 var team2=row.cells[2].innerHTML;
-				$("#t1").html(team1);
-                $("#t2").html(team2);
-				document.getElementById('dialog').style.visibility = 'visible';  
+				$("#t_1").html(team1);
+                $("#t_2").html(team2);
+				document.getElementById('dialog1').style.visibility = 'visible';  
 				
 				despliegaDialogo();
 				
@@ -192,7 +207,7 @@
 			}
 		 
 		 function despliegaDialogo(){
-			$("#dialog").dialog({
+			$("#dialog1").dialog({
 				autoOpen: true,
 				modal: true,
 				buttons: {
@@ -203,7 +218,8 @@
 				defineGanador(goles1, goles2, row1, row);
 				reset(row1, row);
 				$(this).dialog("close");
-				},
+				}
+				,
 				"Cerrar": function () {
 				$(this).dialog("close");
 				}
@@ -211,10 +227,10 @@
 				});
 				
 				el_nombre.value = nombre.value;
-				$("#dialog").dialog("option", "width", 600);
-				$("#dialog").dialog("option", "height", 300);
-				$("#dialog").dialog("option", "resizable", false);
-				$("#dialog").dialog("open");
+				$("#dialog1").dialog("option", "width", 600);
+				$("#dialog1").dialog("option", "height", 600);
+				$("#dialog1").dialog("option", "resizable", false);
+				$("#dialog1").dialog("open");
 		 
 		 
 		 }
@@ -367,11 +383,105 @@
     		store = null;
 	}
 
-    
 
-      
-       
+	
+	
+    function generaJornadaAleatoria(row, conta){		 	
+			if( conta == 1){ 				
+				 var team1=row.cells[2].innerHTML;
+				 $("#t1").html(team1);
+			}             		 
+				 
+			if(conta==2){
+                var team2=row.cells[2].innerHTML;
+                $("#t2").html(team2);				
+			}
+			if(conta==3){
+                var team3=row.cells[2].innerHTML;               
+				$("#t3").html(team3);
+					
+			}
+			if(conta==4){
+                var team4=row.cells[2].innerHTML;
+				$("#t4").html(team4);
+					
+			}
+			if(conta==5){
+                var team5=row.cells[2].innerHTML;
+                $("#t5").html(team5);
+					
+			}
+			if(conta==6){
+                var team6=row.cells[2].innerHTML;
+                $("#t6").html(team6);
+					
+			}	
+			if(conta==7){
+                var team7=row.cells[2].innerHTML;                
+				$("#t7").html(team7);
+					
+			}
+			if(conta==8){
+                var team8=row.cells[2].innerHTML;               
+                $("#t8").html(team8);						
+					
+			}
+			if(conta==9){
+                var team9=row.cells[2].innerHTML;                
+				$("#t9").html(team9);
+					
+			}
+			if(conta==10){
+                var team10=row.cells[2].innerHTML;
+				$("#t10").html(team10);
+					
+			}
+			if(conta==11){
+                var team11=row.cells[2].innerHTML;
+				$("#t11").html(team11);
+					
+			}
+			
+			if(conta==12){
+                var team12=row.cells[2].innerHTML;
+                $("#t12").html(team12);				
+				despliegaDialogo2();
+				alert("en conta 12");
+			}
+			
+		
+		} 
+		 function despliegaDialogo2(){
+		 document.getElementById('data').style.visibility = 'hidden';
+		 document.getElementById('dialog').style.visibility = 'visible';
+			// $("#dialog").dialog({
+				// autoOpen: true,
+				// modal: true,
+				// buttons: {
+				// "Aceptar": function () {
+				
+				// var goles1 = marcador1.value;	// esta variable tiene el dato que se digita en dialogo
+				// var goles2 = marcador2.value;   // segunda casilla de dialogo
+				defineGanador(goles1, goles2, row1, row);
+				reset(row1, row);
+				// $(this).dialog("close");
+				// },	
+				// "Cerrar": function () {
+				// $(this).dialog("close");
+				// }
+				// }
+				// });
+				
+				// el_nombre.value = nombre.value;
+				// $("#dialog").dialog("option", "width", 600);
+				// $("#dialog").dialog("option", "height", 600);
+				
+				// $("#dialog").dialog("open");
+		 
+		 
+		 
+		 }
+		 
 
-        
 
 	 

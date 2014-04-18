@@ -36,7 +36,7 @@ transition: all 0.4s linear;
 }
 
 #dialog{ visibility: hidden;}
-
+#dialog1{ visibility: hidden;}
 
 #data td, #data th {
     font-size:100%;    
