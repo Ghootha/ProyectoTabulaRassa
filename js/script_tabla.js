@@ -15,7 +15,7 @@
    
 		 
 		 iniciaCampeonato.onclick=function(e){
-		 cancha.style.background="#B8E65C";
+		 ocultaTodo();
 		 
 		 // Accedemos la tabla
 		 var table= doc.getElementById("data");
@@ -107,25 +107,19 @@
 		 var divGraf=doc.getElementById('chart_div');
 		 var divGraf2=doc.getElementById('chart_div2');
 		 graficaPuntos.onclick=function(e){
-			 var table= doc.getElementById("data");
-			 table.style.visibility="hidden";
-			 cancha.style.background="#B8E65C";
-			 divGraf2.style.visibility="hidden";
-			 divGraf.style.visibility="visible";
+			 ocultaTodo();
+			 $('#chart_div').css('visibility', 'visible')
 		 }
 		 
 		 graficaGoles.onclick=function(e){
-			 var table= doc.getElementById("data");
-			 table.style.visibility="hidden";
-			 cancha.style.background="#B8E65C";
-             divGraf.style.visibility="hidden";			 
-			 divGraf2.style.visibility="visible";
+			 ocultaTodo();
+			 $('#chart_div2').css('visibility', 'visible'); 
 		 }
 		 
 		 
 		 
 		 	verClasificados.onclick = function(){
-		 			
+		 	 ocultaTodo();		
 	 		 var table= doc.getElementById("data");
 	 		 table.setAttribute("class","visible");
 	 		 var filas = document.getElementById("data").rows;
@@ -141,6 +135,7 @@
 	    }		
 	    
 	    verDescienden.onclick= function(){
+			 ocultaTodo();	
 	 		 var table= doc.getElementById("data");
 	 		 table.setAttribute("class","visible");
 			 
@@ -164,7 +159,7 @@
 		 
 		 
 		 generaJornada.onclick=function(e){
-		 
+		 ocultaTodo();
 		 var numAleatorio;var conta=1;
 		 equipos=[];
 		 usados=[];
@@ -526,7 +521,13 @@
 		
 		} 
 		 
-		 
-
+	function ocultaTodo(){
+		$('#data').css('visibility', 'hidden');		
+		$('#chart_div2').css('visibility', 'hidden');
+		$('#chart_div').css('visibility', 'hidden'); 		
+		$('#dialog').css('visibility', 'hidden');
+		$('#panelView').css('background','#B8E65C');		
+	}	 
+	
 
 	 
