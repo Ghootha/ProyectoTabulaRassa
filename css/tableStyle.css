@@ -12,9 +12,11 @@ table#data {
 
 tr, td {
     text-align:center;
+   
 }
 thead td{
 	    font-family:Arial;font-weight:normal;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;font-weight:bold;text-align:center;
+        
 }
 
 #data tr{
@@ -32,7 +34,7 @@ transition: all 0.4s linear;
 }
 
 .team , .equipo{
- text-align:left;
+ text-align:left; 
 }
 
 #dialog{ visibility: hidden;}
@@ -107,10 +109,11 @@ transition: all 0.4s linear;
 }
 
 .hidden{
-			
-			display:none;
-	}
+	display:none;
+    
+}
 	
-	.visible{
-				visibility: visible;
-		}
+.visible{
+  visibility: visible;
+  
+}

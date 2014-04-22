@@ -5,22 +5,30 @@
 	   window.onload= function(e){	
 		 
 	     var doc = document;
-		 var iniciaCampeonato=doc.getElementById("ver");
+		 var verTabla=doc.getElementById("ver");
 		 var verClasificados=doc.getElementById("clasificados");
 		 var verDescienden=doc.getElementById("descienden");
 		 var creaJornada=doc.getElementById("creaJornada");
 		 var generaJornada=doc.getElementById("generaJornada");
 		 var cancha=doc.getElementById("panelView");
+		 var creaCamp=doc.getElementById("creaCampeonato");
 		 
+		 
+		 verTabla.onclick=function(e){
+			 reseteaTabla();
+			 ocultaTodo();
+			 
+			 $('#data').css('visibility', 'visible');
+		 }
    
 		 
-		 iniciaCampeonato.onclick=function(e){
+		 creaCamp.onclick=function(e){
 		 ocultaTodo();
 		 
 		 // Accedemos la tabla
 		 var table= doc.getElementById("data");
 		 // La hacemos visible
-	     table.style.visibility="visible";
+	     
 		 // Borramos filas si es que ya se habían cargado
 		 var tb = table.tBodies[0];
 		 for(;tb.childElementCount;)	 
@@ -120,8 +128,7 @@
 		 
 		 	verClasificados.onclick = function(){
 		 	 ocultaTodo();		
-	 		 var table= doc.getElementById("data");
-	 		 table.setAttribute("class","visible");
+	 		 $('#data').css('visibility', 'visible');
 	 		 var filas = document.getElementById("data").rows;
 	 		 var i = 1; 
 			for(i in filas){
@@ -136,8 +143,7 @@
 	    
 	    verDescienden.onclick= function(){
 			 ocultaTodo();	
-	 		 var table= doc.getElementById("data");
-	 		 table.setAttribute("class","visible");
+	 		 $('#data').css('visibility', 'visible');
 			 
 	 		 var filas = document.getElementById("data").rows;
 	 		 var i = 1; 
@@ -529,5 +535,15 @@
 		$('#panelView').css('background','#B8E65C');		
 	}	 
 	
-
+ function reseteaTabla(){
+	
+	var filas = document.getElementById("data").rows;
+	if(filas[1].getAttribute('class')=='visible' || filas[10].getAttribute('class')=='visible'){
+	 		 var i = 1; 
+			for(i in filas){
+					filas[i].setAttribute("class"," ");
+						
+    	} 
+	}
+ }
 	 
