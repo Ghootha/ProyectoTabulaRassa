@@ -102,15 +102,26 @@
 		 
 		 
 		 
-		 var genGrafica=doc.getElementById("generaGrafica");
+		 var graficaPuntos=doc.getElementById("puntosCampeonato");
+		 var graficaGoles=doc.getElementById("golesCampeonato");
 		 var divGraf=doc.getElementById('chart_div');
-		 
-		 genGrafica.onclick=function(e){
+		 var divGraf2=doc.getElementById('chart_div2');
+		 graficaPuntos.onclick=function(e){
 			 var table= doc.getElementById("data");
 			 table.style.visibility="hidden";
-			 cancha.style.background="#B8E65C";	
+			 cancha.style.background="#B8E65C";
+			 divGraf2.style.visibility="hidden";
 			 divGraf.style.visibility="visible";
 		 }
+		 
+		 graficaGoles.onclick=function(e){
+			 var table= doc.getElementById("data");
+			 table.style.visibility="hidden";
+			 cancha.style.background="#B8E65C";
+             divGraf.style.visibility="hidden";			 
+			 divGraf2.style.visibility="visible";
+		 }
+		 
 		 
 		 
 		 	verClasificados.onclick = function(){
@@ -119,11 +130,11 @@
 	 		 table.setAttribute("class","visible");
 	 		 var filas = document.getElementById("data").rows;
 	 		 var i = 1; 
-    for(i in filas){
-    	filas[i].setAttribute("class","visible");
-    		 if(i>4){
+			for(i in filas){
+					filas[i].setAttribute("class","visible");
+						if(i>4){
 								    	filas[i].setAttribute("class","hidden");
-    		 	}
+						}
     	}
 	 		 
 	

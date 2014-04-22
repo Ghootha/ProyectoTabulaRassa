@@ -41,26 +41,25 @@
       // draws it.
       function drawChart() {
 
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Puntos');
-        data.addRows([
-          [nombre, pts],
-          [nombre2, pts2],
-          [nombre3, pts3],
-          [nombre4, pts4],
-          [nombre5, pts5]
+        var data = google.visualization.arrayToDataTable([
+          ['Equipo', 'PJ', 'PG', 'PE'],
+          [nombre,  teamObj.PJ,  teamObj.PG,  teamObj.PE],
+          [nombre2, teamObj2.PJ, teamObj2.PG, teamObj2.PE],
+          [nombre3, teamObj3.PJ, teamObj3.PG, teamObj3.PE],
+          [nombre4, teamObj4.PJ, teamObj4.PG, teamObj3.PE]
         ]);
 
-        // Set chart options
-        var options = {'title':'Equipos con mas puntos en el campeonato',
-					   'is3D':true,
-                       'width':400,
-                       'height':300};
+        var options = {
+          title: 'Rendimiento de Equipos', 
+		  width:700,
+		  height:295,
+          hAxis: {title: 'Equipo', titleTextStyle: {color: 'red'}
+		 
+          }
+        };
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
         chart.draw(data, options);
+
       }
     

@@ -9,6 +9,10 @@ div#chart_div{
     visibility:hidden; top: -10px;
     margin:-37% 10% 13% 30%; 
 }
+div#chart_div2{
+    visibility:hidden; 
+    margin:-49% 10% 14.3% 10%; 
+}
 
 div#dialog{ 
     height: 304px;
