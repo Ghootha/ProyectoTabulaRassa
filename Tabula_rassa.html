@@ -12,8 +12,7 @@
 	<script src="js/script_json.js"	type="text/javascript">	</script>
 	<script src="js/script_tabla.js" type="text/javascript"> </script>	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<script src="js/script_Grafica.js" type="text/javascript"> </script>
-	<script src="js/script_Grafica2.js" type="text/javascript"> </script>
+	<script src="js/script_Grafica.js" type="text/javascript"> </script>	
 	
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -50,9 +49,9 @@
 				<div id="content">
 					<nav id="MenuNav">
 						<ul>
-							<li><a href="#" title="Menu 1">Campeonatos</a>
+							<li><a href="#" title="Menu campeonato">Campeonatos</a>
 								<ul>
-									<li id ="creaCampeonato" ><a href="#" title="SubMenu 1" >Crear</a></li>
+									<li id ="creaCampeonato" ><a href="#" title="Crea un campeonato" >Crear</a></li>
 									<li><a href="#" title="SubMenu 2">SubMenu 2</a></li>
 									<li><a href="#" title="SubMenu 3">SubMenu 3</a></li>
 									<li class="ultimo"><a href="#" title="SubMenu 4">SubMenu 4</a></li>
@@ -60,7 +59,7 @@
 							</li>
 							<li><a href="#" title="Menu 2">Jornadas</a>
 								<ul>
-									<li id ="generaJornada"  ><a href="#" title="SubMenu 4">Generar</a></li>
+									<li id ="generaJornada"  ><a href="#" title="Genera emparejamientos Aleatorios">Generar</a></li>
 									<li id ="creaJornada"  ><a href="#" title="SubMenu 5">Crear</a></li>
 									<li><a href="#" title="SubMenu 6">Modificar</a></li>
 									<li class="ultimo"><a href="#" title="SubMenu 4">Eliminar</a></li>
@@ -86,74 +85,80 @@
 					</nav>
 					
 					<div id="panelView">
-						<table id="data" class="tg" style="table-layout: fixed; width: 574px">
-						<caption> <span class="titulo">Tabla de posiciones campeonato nacional</span>
+					<div id="table">
+							<table id="data" class="tg" style="table-layout: fixed; width: 574px">
+								<caption> <span class="titulo">Tabla de posiciones campeonato nacional</span>
 
-						</caption>
-					  
-						<thead id="datah">
-							<td id="numero">#</td>
-							<td>  </td>
-							<td id="equipo" colspan="5">Equipo</td>
-							<td id="columna" onclick="ordenColumna(this)">PJ</td>
-							<td id="columna" onclick="ordenColumna(this)">PG</td>
-							<td id="columna" onclick="ordenColumna(this)">PE</td>
-							<td id="columna" onclick="ordenColumna(this)">PP</td>
-							<td id="columna" onclick="ordenColumna(this)">GF</td>
-							<td id="columna" onclick="ordenColumna(this)">GC</td>
-							<td id="columna" onclick="ordenColumna(this)">DG</td>
-							<td id="columna" onclick="ordenColumna(this)">Pt</td>
-						</thead><br/>
-						<tbody></tbody>
-					</table>						
-				    </div>
-					 <div id="chart_div"></div>
-					 <div id="chart_div2"></div>
-					 <div id="dialog1" title="Inserte resultado">	
-						<label id="t_1" for="marcador_1"></label>
-						<input type="text" id="marcador_1" value="" />
-						
-						<label id="t_2" for="marcador_2"></label>
-						<input type="text" id="marcador_2" value="" />
-					 </div>
-					 <div id="dialog" title="Inserte resultado">	
-						<label id="t1" for="marcador1"></label>
-						<input type="text" id="marcador1" value="" size="1" />
-						
-						<label id="t2" for="marcador2"></label>
-						<input type="text" id="marcador2" value="" size="1" /><br>
-						
-						<label id="t3" for="marcador3"></label>
-						<input type="text" id="marcador3" value="" size="1" />
-						
-						<label id="t4" for="marcador4"></label>
-						<input type="text" id="marcador4" value=""size="1" /><br>
-						
-						<label id="t5" for="marcador5"></label>
-						<input type="text" id="marcador5" value="" size="1" />
-						
-						<label id="t6" for="marcador6"></label>
-						<input type="text" id="marcador6" value="" size="1" /><br>
-						
-						<label id="t7" for="marcador7"></label>
-						<input type="text" id="marcador7" value="" size="1" />
-						
-						<label id="t8" for="marcador8"></label>
-						<input type="text" id="marcador8" value="" size="1" /><br>
-						
-						<label id="t9" for="marcador9"></label>
-						<input type="text" id="marcador9" value="" size="1" />
-						
-						<label id="t10" for="marcador10"></label>
-						<input type="text" id="marcador10" value="" size="1" /><br>
-						
-						<label id="t11" for="marcador11"></label>
-						<input type="text" id="marcador11" value="" size="1" />
-						
-						<label id="t12" for="marcador12"></label>
-						<input type="text" id="marcador12" value="" size="1" /><br>
-						<input type="button" id="aceptaJornada" value="aceptar"/>
+								</caption>
+							  
+								<thead id="datah">
+									<td id="numero">#</td>
+									<td>  </td>
+									<td id="equipo" colspan="5">Equipo</td>
+									<td id="columna" onclick="ordenColumna(this)">PJ</td>
+									<td id="columna" onclick="ordenColumna(this)">PG</td>
+									<td id="columna" onclick="ordenColumna(this)">PE</td>
+									<td id="columna" onclick="ordenColumna(this)">PP</td>
+									<td id="columna" onclick="ordenColumna(this)">GF</td>
+									<td id="columna" onclick="ordenColumna(this)">GC</td>
+									<td id="columna" onclick="ordenColumna(this)">DG</td>
+									<td id="columna" onclick="ordenColumna(this)">Pt</td>
+								</thead><br/>
+								<tbody></tbody>
+						</table>
 					</div>
+
+					<div id="chart_div"></div>
+					<div id="chart_div2"></div>		
+					</div>
+						 
+						 
+						 
+						 <div id="dialog1" title="Inserte resultado">	
+							<label id="t_1" for="marcador_1"></label>
+							<input type="text" id="marcador_1" value="" />
+							
+							<label id="t_2" for="marcador_2"></label>
+							<input type="text" id="marcador_2" value="" />
+						 </div>
+						 <div id="dialog" title="Inserte resultado">	
+							<label id="t1" for="marcador1"></label>
+							<input type="text" id="marcador1" value="" size="1" />
+							
+							<label id="t2" for="marcador2"></label>
+							<input type="text" id="marcador2" value="" size="1" /><br>
+							
+							<label id="t3" for="marcador3"></label>
+							<input type="text" id="marcador3" value="" size="1" />
+							
+							<label id="t4" for="marcador4"></label>
+							<input type="text" id="marcador4" value=""size="1" /><br>
+							
+							<label id="t5" for="marcador5"></label>
+							<input type="text" id="marcador5" value="" size="1" />
+							
+							<label id="t6" for="marcador6"></label>
+							<input type="text" id="marcador6" value="" size="1" /><br>
+							
+							<label id="t7" for="marcador7"></label>
+							<input type="text" id="marcador7" value="" size="1" />
+							
+							<label id="t8" for="marcador8"></label>
+							<input type="text" id="marcador8" value="" size="1" /><br>
+							
+							<label id="t9" for="marcador9"></label>
+							<input type="text" id="marcador9" value="" size="1" />
+							
+							<label id="t10" for="marcador10"></label>
+							<input type="text" id="marcador10" value="" size="1" /><br>
+							
+							<label id="t11" for="marcador11"></label>
+							<input type="text" id="marcador11" value="" size="1" />
+							
+							<label id="t12" for="marcador12"></label>
+							<input type="text" id="marcador12" value="" size="1" /><br>
+							<input type="button" id="aceptaJornada" value="aceptar"/>
+						</div>
 					
 				</div>
 			</div>
@@ -161,17 +166,17 @@
 				<h1>Funciones</h1>
 				<nav id="MenuNavIzq">
 						<ul>
-							<li><a href="#" title="Menu 1Izq">Tabla</a>
+							<li><a href="#" title="Menu tabla">Tabla</a>
 								<ul>
-									<li id="ver"><a href="#" title="SubMenu 1Izq">Ver</a></li>
-									<li id="clasificados"><a href="#" title="SubMenu 2Izq">Clasificados</a></li>									
-									<li id="descienden" class="ultimo"><a href="#" title="SubMenu 4">Descienden</a></li>
+									<li id="ver"><a href="#" title="Muestra la tabla del campeonato">Ver</a></li>
+									<li id="clasificados"><a href="#" title="Muestra los clasificados ">Clasificados</a></li>									
+									<li id="descienden" class="ultimo"><a href="#" title="Muestra los que descienden">Descienden</a></li>
 								</ul>	
 							</li>
-							<li><a href="#" title="Menu 2Der">Graficas</a>
+							<li><a href="#" title="Menu de graficos">Graficas</a>
 								<ul>
-									<li id="puntosCampeonato" ><a  href="#" title="SubMenu 4Izq">Puntos Campeonato</a></li>
-									<li id="golesCampeonato"><a href="#" title="SubMenu 5Izq">Goles Campeonato</a></li>
+									<li id="puntosCampeonato" ><a  href="#" title="Genera grafico de puntos del campeonato">Puntos Campeonato</a></li>
+									<li id="golesCampeonato"><a href="#" title="Genera grafico de rendimiento ">Rendimiento</a></li>
 									
 								</ul>
 							</li>

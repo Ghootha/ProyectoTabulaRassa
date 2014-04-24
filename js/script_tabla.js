@@ -114,13 +114,16 @@
 		 var graficaGoles=doc.getElementById("golesCampeonato");
 		 var divGraf=doc.getElementById('chart_div');
 		 var divGraf2=doc.getElementById('chart_div2');
+		 
 		 graficaPuntos.onclick=function(e){
 			 ocultaTodo();
+			 drawChart();
 			 $('#chart_div').css('visibility', 'visible')
 		 }
 		 
 		 graficaGoles.onclick=function(e){
 			 ocultaTodo();
+			 drawChart2();
 			 $('#chart_div2').css('visibility', 'visible'); 
 		 }
 		 
@@ -547,3 +550,87 @@
 	}
  }
 	 
+	  function drawChart() {
+		
+		if( document.getElementById("data").rows[2] != null){
+			// Create the data table.
+			var rows=document.getElementById("data").rows;
+			
+			var nombre= rows[1].cells[2].innerHTML;
+			var nombre2= rows[2].cells[2].innerHTML;
+			var nombre3= rows[3].cells[2].innerHTML;
+			var nombre4= rows[4].cells[2].innerHTML;
+			var nombre5= rows[5].cells[2].innerHTML;
+			var pts=  parseInt(rows[1].cells[10].innerHTML);
+			var pts2= parseInt(rows[2].cells[10].innerHTML);
+			var pts3= parseInt(rows[3].cells[10].innerHTML);
+			var pts4= parseInt(rows[4].cells[10].innerHTML);
+			var pts5= parseInt(rows[5].cells[10].innerHTML);
+			
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Topping');
+			data.addColumn('number', 'Puntos');
+			data.addRows([
+			  [nombre,  pts],
+			  [nombre2, pts2],
+			  [nombre3, pts3],
+			  [nombre4, pts4],
+			  [nombre5, pts5]
+			]);
+
+			// Set chart options
+			var options = {'title':'Equipos con mas puntos en el campeonato',
+						   'is3D':true,
+						   'width':700,
+						   'height':315};
+
+			// Instantiate and draw our chart, passing in some options.
+			var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+			chart.draw(data, options);
+		}
+	  }
+	  
+	  function drawChart2() {
+			if( document.getElementById("data").rows[2] != null){
+				var rows=document.getElementById("data").rows;
+				
+				var nombre= rows[1].cells[2].innerHTML;
+				var nombre2= rows[2].cells[2].innerHTML;
+				var nombre3= rows[3].cells[2].innerHTML;
+				var nombre4= rows[4].cells[2].innerHTML;
+				
+				var PJ=  parseInt(rows[1].cells[3].innerHTML);
+				var PJ2= parseInt(rows[2].cells[3].innerHTML);
+				var PJ3= parseInt(rows[3].cells[3].innerHTML);
+				var PJ4= parseInt(rows[4].cells[3].innerHTML);
+				
+				var PG=  parseInt(rows[1].cells[4].innerHTML);
+				var PG2= parseInt(rows[2].cells[4].innerHTML);
+				var PG3= parseInt(rows[3].cells[4].innerHTML);
+				var PG4= parseInt(rows[4].cells[4].innerHTML);
+				
+				var PE=  parseInt(rows[1].cells[5].innerHTML);
+				var PE2= parseInt(rows[2].cells[5].innerHTML);
+				var PE3= parseInt(rows[3].cells[5].innerHTML);
+				var PE4= parseInt(rows[4].cells[5].innerHTML);
+				var data = google.visualization.arrayToDataTable([
+				  ['Equipo', 'PJ', 'PG', 'PE'],
+				  [nombre, PJ, PG, PE],
+				  [nombre2, PJ2, PG2, PE2],
+				  [nombre3, PJ3, PG3, PE3],
+				  [nombre4, PJ4, PG4, PE4]
+				]);
+
+				var options = {
+				  title: 'Rendimiento de Equipos', 
+				  width:700,
+				  height:315,
+				  hAxis: {title: 'Equipo', titleTextStyle: {color: 'red'}
+				 
+				  }
+				};
+
+				var chart = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
+				chart.draw(data, options);
+			}
+	  }

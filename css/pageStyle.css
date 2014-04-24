@@ -7,11 +7,16 @@ html,body{
 }
 div#chart_div{
     visibility:hidden; top: -10px;
-    margin:-37% 10% 13% 30%; 
+    margin:-47.5% 0% 0% 10%; 
 }
 div#chart_div2{
-    visibility:hidden; 
-    margin:-49% 20% 14.3% 10%; 
+    visibility:hidden;
+    margin:-38.1% 0% 3% 10%; 
+}
+
+div#table{
+    visibility:hidden;
+    margin:-42% 10% 13% 16%; 
 }
 
 div#dialog{ 
@@ -58,11 +63,6 @@ a{
 	padding:10px
 }
 
-table#data.tg{
-    margin:-29.5% 0% -26.5% 21%
-    
-    
-}
 div#extra>ul{ background-color: white;}
 div#content p{line-height:1.4}
 div#navigation{background:#E3E3ED;}
@@ -154,9 +154,9 @@ div#panelView{
     background-image:url(../images/cancha.jpg); 
     background-size:100% 100%; 
     background-repeat:no-repeat;   
-    padding:19% 30% 19% 1%;        
+    padding:42% 0% 0% 0%;        
     margin-top:-2%;
-    margin-bottom:1% 
+    margin-bottom:12% 
 }
 
 div#navigation{
