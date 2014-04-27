@@ -2,6 +2,7 @@
 	  var JSON_DATA_URL="json/teams.json";
 	  var equipos=new Array();
 	  var usados= new Array();
+	  var contJornada=1;
 	   window.onload= function(e){	
 		 
 	     var doc = document;
@@ -168,19 +169,23 @@
 		 
 		 
 		 generaJornada.onclick=function(e){
-		 ocultaTodo();
-		 var numAleatorio;var conta=1;
-		 equipos=[];
-		 usados=[];
-				var filastabla=document.getElementById("data").rows;
-				for(var i=1; i<13;i++){
-					var numAleatorio;
-					numAleatorio=aleatorio(1, 12);;
-					var row=filastabla[numAleatorio];					
-					generaJornadaAleatoria(row, conta, equipos);
-					conta++;
-				}
-				
+			if(contJornada<23){
+				 ocultaTodo();
+				 var numAleatorio;var conta=1;
+				 equipos=[];
+				 usados=[];
+						var filastabla=document.getElementById("data").rows;
+						for(var i=1; i<13;i++){
+							var numAleatorio;
+							numAleatorio=aleatorio(1, 12);;
+							var row=filastabla[numAleatorio];					
+							generaJornadaAleatoria(row, conta, equipos);
+							conta++;
+						}
+			}else{ 
+				terminaCampeonato(); //metodo que termina el campeonato
+				contJornada=1;
+			}	
 		 }
 		 
 		document.getElementById("aceptaJornada").onclick= function(){
@@ -459,6 +464,7 @@
 	
 		
     function generaJornadaAleatoria(row, conta, equipos){
+			
 			if( conta == 1){ 				
 				 var team1=row.cells[2].innerHTML;
 				 $("#t1").html(team1);
@@ -519,14 +525,16 @@
 			if(conta==12){
                 var team12=row.cells[2].innerHTML;
                 $("#t12").html(team12);				
-				equipos.push(row);
+				equipos.push(row);				
+				$("#numeroJornada").html('Jornada '+contJornada);
+				contJornada++;				
 				document.getElementById('data').style.visibility = 'hidden';
 				document.getElementById('dialog').style.visibility = 'visible';
 				
 				
 				
 			}
-			
+		
 		
 		} 
 		 
@@ -633,4 +641,11 @@
 				var chart = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
 				chart.draw(data, options);
 			}
+	  }
+	  
+	  function terminaCampeonato(){
+	   alert('en terminacampeonato');
+		document.getElementById('dialog').style.visibility = 'hidden';		
+		
+		
 	  }

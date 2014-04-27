@@ -5,6 +5,17 @@ html,body{
 	margin-left:2%;
 	padding:0,1%
 }
+#numeroJornada{
+    margin-left:40%;
+    color: black;
+    font-weight: bold;
+    padding: 1%;
+    display:inline-block;
+    vertical-align:middle;
+    width:160px; 
+    
+}
+
 div#chart_div{
     visibility:hidden; top: -10px;
     margin:-47.5% 0% 0% 10%; 
@@ -22,8 +33,10 @@ div#table{
 div#dialog{ 
     height: 304px;
     font: 145% arial,sans-serif;   
-    margin:-48.4% 0% 12% 1%;
+    margin:-53% 0% 12% 1%;
+    padding-bottom:4.6%;
     background-color: #B8E65C;
+    
     
 }
 div#dialog1{ 
