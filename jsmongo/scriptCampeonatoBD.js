@@ -131,7 +131,7 @@ var pz={
     DG:-8,
     Pt:22
 };
-var cameponato={
+var campeonato={
 	tipo: "Verano",
 	anno: 2014,
 	Homenajeado: "Pilo Obando",
