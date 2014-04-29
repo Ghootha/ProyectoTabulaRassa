@@ -76,7 +76,7 @@ var cartago={
     Pt:21
 };
 var carmen={
-	team" : "Carmelita",
+	team : "Carmelita",
 	PJ:21,
     PG:9,
     PE:4,
@@ -135,7 +135,7 @@ var campeonato={
 	tipo: "Verano",
 	anno: 2014,
 	Homenajeado: "Pilo Obando",
-	equipos=[csh, lda, saprissa, limon, santos, ucr, cartago, carmen, belen, puerto, urugual, pz];
+	equipos:[csh, lda, saprissa, limon, santos, ucr, cartago, carmen, belen, puerto, uruguay, pz]
 }; 
 	
 
