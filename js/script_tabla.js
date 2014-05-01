@@ -1,5 +1,5 @@
 // Ruta de datos en JSON (relativa al HTML)
-	  var JSON_DATA_URL="json/teams.json";
+	  var JSON_DATA_URL="/teams";
 	  var equipos=new Array();
 	  var usados= new Array();
 	  var contJornada=1;
@@ -40,14 +40,21 @@
 		 var data = loadJSONData(JSON_DATA_URL,
 		   function(e){ // funcion de error
 		      // retornamos un objeto vacio
+		      console.log("error en load");
 		      return {results:{title:"Error Data Not Available"}, 
 			                   teams:[]
 					 };
-		   }
+		   },
+		   function(data){buildTable(data, table);}
 		 );
 		 
+		 
+		 }
+		 
+		 
+		  function buildTable(data, table){		
 		 // Ver muestra de los resultados
-		 var teams = data.results.teams;
+		 var teams = data.results[0].results.teams;
 		 // Ponemos un caption tomando su valor del JSON
 		 if(!table.caption){
 		   var cap = doc.createElement("caption");

@@ -1,7 +1,7 @@
 // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest
 		// Lectura sincronica de datos
 		
-function loadJSONData(url, handler){
+/*function loadJSONData(url, handler){
 	var http_request = new XMLHttpRequest(); //ajax
 	http_request.open("GET", url, false);
 	try{
@@ -10,4 +10,22 @@ function loadJSONData(url, handler){
 		  return handler(e);
 	}
 	return JSON.parse(http_request.responseText);
-}
+}*/
+
+function loadJSONData(url, handler, builder){
+            alert("loadJSONData"+url);
+			   $.ajax({
+			         url:url,
+                  dataType:"json",	
+					   error: function(req, e, msg){
+					                   alert(msg);
+						       handler(e)},
+						cache: false,
+					   async:false
+			          }
+				).done(function(d){
+				       alert("done loadJSONData"+d);
+				       console.dir(d);
+				       builder(d, window.table);
+				       });
+};	
