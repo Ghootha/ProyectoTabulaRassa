@@ -4,6 +4,8 @@
 	  var usados= new Array();
 	  var contJornada=1;
 	   window.onload= function(e){	
+	   
+	   
 		 
 	     var doc = document;
 		 var verTabla=doc.getElementById("ver");
@@ -21,6 +23,30 @@
 			 
 			 $('#data').css('visibility', 'visible');
 		 }
+		 
+		 
+		 //-----------------------------------------------------
+		 $("#dialogInfo").dialog({
+				autoOpen: false,
+				modal: true,
+				width: 600,
+				height: 300,
+				buttons: {
+					"Cerrar": function() {
+						$(this).dialog("close");
+					}
+				}
+			});
+			
+		
+			$('#logo2').click(function() {
+       $("#dialogInfo").dialog("open");
+        
+        
+       
+    });
+		 
+		 //-----------------------------------------------------
    
 		 
 		 creaCamp.onclick=function(e){
@@ -45,16 +71,16 @@
 			                   teams:[]
 					 };
 		   },
-		   function(data){buildTable(data, table);}
+		   function(data){buildTable(data, table,tb);}
 		 );
 		 
 		 
 		 }
 		 
 		 
-		  function buildTable(data, table){		
+		  function buildTable(data, table,tb){		
 		 // Ver muestra de los resultados
-		 var teams = data.results[0].results.teams;
+		 var teams = data.results[0].equipos;
 		 // Ponemos un caption tomando su valor del JSON
 		 if(!table.caption){
 		   var cap = doc.createElement("caption");
@@ -99,18 +125,28 @@
 		   arrow.innerHTML = " ";
 		   team.innerHTML=teamObj.team;
                    team.setAttribute("colspan",5);
-		   PJ.innerHTML=teamObj.PJ;
+		  /* PJ.innerHTML=teamObj.PJ;
 		   PG.innerHTML=teamObj.PG;
 		   PE.innerHTML=teamObj.PE;
 		   PP.innerHTML=teamObj.PP;
 		   GF.innerHTML=teamObj.GF;
 		   GC.innerHTML=teamObj.GC;
 		   DG .innerHTML=teamObj.DG;
-		   Pt.innerHTML=teamObj.Pt;
+		   Pt.innerHTML=teamObj.Pt;*/
+		   
+		   PJ.innerHTML=0;
+		   PG.innerHTML=0;
+		   PE.innerHTML=0;
+		   PP.innerHTML=0;
+		   GF.innerHTML=0;
+		   GC.innerHTML=0;
+		   DG .innerHTML=0;
+		   Pt.innerHTML=0;
  
                    j++;
 		 
 		 }
+		 sortTable(10);
 		 }
 		 
 		 
@@ -297,8 +333,8 @@
 				buttons: {
 				"Aceptar": function () {
 				
-				var goles1 = marcador1.value;	// esta variable tiene el dato que se digita en dialogo
-				var goles2 = marcador2.value;   // segunda casilla de dialogo
+				var goles1 = marcador_1.value;	// esta variable tiene el dato que se digita en dialogo
+				var goles2 = marcador_2.value;   // segunda casilla de dialogo
 				defineGanador(goles1, goles2, row1, row);
 				reset(row1, row);
 				$(this).dialog("close");
