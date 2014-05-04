@@ -91,7 +91,7 @@ div#header{
 }
 div.logoCSH{
     position: absolute;
-    
+   
     background-image: url("../images/CS_Herediano.png");
     background-repeat:no-repeat;
     background-size: 40% 55%;
@@ -198,3 +198,7 @@ div#footer a{
     display:inline;
     float:right;
 }
+
+div#infoDialogo div{
+	display: inline;
+	}

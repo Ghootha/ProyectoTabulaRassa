@@ -81,6 +81,7 @@
 		  function buildTable(data, table,tb){		
 		 // Ver muestra de los resultados
 		 var teams = data.results[0].equipos;
+		 var jornadas = data.results[0].jornadas; //aqui se guarda el array de jornadas
 		 // Ponemos un caption tomando su valor del JSON
 		 if(!table.caption){
 		   var cap = doc.createElement("caption");
@@ -146,6 +147,11 @@
                    j++;
 		 
 		 }
+		 /*aqui llamamos a la funcion que calcula los datos segun las jornadas (calculaDatosJornadas() declarada al final)
+		 guardadas en las var jornadas*/
+		 
+		 calculaDatosJornadas(jornadas);
+		 ////-------------------------------------------------------------------------------------------------------
 		 sortTable(10);
 		 }
 		 
@@ -692,3 +698,35 @@
 		
 		
 	  }
+	  
+	  
+	  function calculaDatosJornadas(arrayJornadas){
+	  	  
+	  	    var partido, fila1,fila2, resultados,res,result1,result2;
+	  	    var filas = document.getElementById("data").rows;
+							for(i in arrayJornadas){
+											partidos=arrayJornadas[i].partidos;
+											for(j in partidos){
+												   partido=partidos[j];
+												   fila1 = rowReturn(partido.Equipo1,filas);
+												   fila2 = rowReturn(partido.Equipo2,filas);
+												   resultados = partido.resultado;
+												   res = resultados.split('-');
+												   result1 = res[0];
+												   result2 = res[1];
+												   defineGanador(result1, result2, fila1, fila2);
+											}
+			
+			}
+			}
+			
+			function rowReturn(equipo,filas){ //funcion que devuelve la fila en la que se encuentra un equipo en la tabla
+				      
+									for(i in filas){
+										 var fila=filas[i];
+										 var teamName = fila.cells[2].innerHTML;
+											if(teamName==equipo){
+												    return fila;
+												}
+										}
+				}

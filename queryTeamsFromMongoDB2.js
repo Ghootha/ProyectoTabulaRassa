@@ -12,11 +12,11 @@ http://mongodb.github.io/node-mongodb-native/markdown-docs/insert.html
 var mongoDriver = require('mongodb');
 var MongoClient = mongoDriver.MongoClient;
 var ObjectID    = mongoDriver.ObjectID;
-var dbName = "equipos";
+var dbName = "futbol";
 var server = "localhost";
 var mongoPort = "27017";
 var connectionString = "mongodb://"+server+":"+mongoPort+"/"+dbName;
-var collectionName = "campeonato2";
+var collectionName = "campeonatos";///////////////////////////////////
 
 var connectToDB = function(mainObj, h){
   console.log("connectToDB starts:");
