@@ -25,6 +25,11 @@ div#chart_div2{
     margin:-38.1% 0% 3% 10%; 
 }
 
+div#dashboard_div{
+    visibility:hidden;
+    margin:-42% 0% 0% 10%; 
+}
+
 div#table{
     visibility:hidden;
     margin:-42% 10% 13% 16%; 

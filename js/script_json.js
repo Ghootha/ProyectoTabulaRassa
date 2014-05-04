@@ -13,7 +13,7 @@
 }*/
 
 function loadJSONData(url, handler, builder){
-            alert("loadJSONData"+url);
+           
 			   $.ajax({
 			         url:url,
                   dataType:"json",	
@@ -24,7 +24,7 @@ function loadJSONData(url, handler, builder){
 					   async:false
 			          }
 				).done(function(d){
-				       alert("done loadJSONData"+d);
+				      
 				       console.dir(d);
 				       builder(d, window.table);
 				       });

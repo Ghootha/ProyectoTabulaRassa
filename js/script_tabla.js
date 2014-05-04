@@ -152,7 +152,7 @@
 		 
 		 calculaDatosJornadas(jornadas);
 		 ////-------------------------------------------------------------------------------------------------------
-		 sortTable(10);
+		// sortTable(10);
 		 }
 		 
 		 
@@ -162,9 +162,10 @@
 		 
 		 var graficaPuntos=doc.getElementById("puntosCampeonato");
 		 var graficaGoles=doc.getElementById("golesCampeonato");
+		 var graficaDescienden=doc.getElementById("puntosGeneral");
 		 var divGraf=doc.getElementById('chart_div');
 		 var divGraf2=doc.getElementById('chart_div2');
-		 
+		 var divGraf3=doc.getElementById('dashboard_div');
 		 graficaPuntos.onclick=function(e){
 			 ocultaTodo();
 			 drawChart();
@@ -176,7 +177,13 @@
 			 drawChart2();
 			 $('#chart_div2').css('visibility', 'visible'); 
 		 }
-		 
+		
+		 graficaDescienden.onclick=function(e){
+		 debugger;
+			 ocultaTodo();
+			 drawChart3();
+			 $('#dashboard_div').css('visibility', 'visible'); 
+		 }	
 		 
 		 
 		 	verClasificados.onclick = function(){
@@ -590,6 +597,7 @@
 	function ocultaTodo(){
 		$('#data').css('visibility', 'hidden');		
 		$('#chart_div2').css('visibility', 'hidden');
+		$('#dashboard_div').css('visibility', 'hidden');
 		$('#chart_div').css('visibility', 'hidden'); 		
 		$('#dialog').css('visibility', 'hidden');
 		$('#panelView').css('background','#B8E65C');		
@@ -690,6 +698,93 @@
 				var chart = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
 				chart.draw(data, options);
 			}
+	  }
+	  
+	  function drawChart3() {
+		
+		if( document.getElementById("data").rows[2] != null){
+			// Create the data table.
+			var rows=document.getElementById("data").rows;
+			
+			var nombre= rows[1].cells[2].innerHTML;
+			var nombre2= rows[2].cells[2].innerHTML;
+			var nombre3= rows[3].cells[2].innerHTML;
+			var nombre4= rows[4].cells[2].innerHTML;
+			var nombre5= rows[5].cells[2].innerHTML;
+			var nombre6= rows[6].cells[2].innerHTML;
+			var nombre7= rows[7].cells[2].innerHTML;
+			var nombre8= rows[8].cells[2].innerHTML;
+			var nombre9= rows[9].cells[2].innerHTML;
+			var nombre10= rows[10].cells[2].innerHTML;
+			var nombre11= rows[11].cells[2].innerHTML;
+			var nombre12= rows[12].cells[2].innerHTML;
+			var pts=  parseInt(rows[1].cells[10].innerHTML);
+			var pts2= parseInt(rows[2].cells[10].innerHTML);
+			var pts3= parseInt(rows[3].cells[10].innerHTML);
+			var pts4= parseInt(rows[4].cells[10].innerHTML);
+			var pts5= parseInt(rows[5].cells[10].innerHTML);
+			var pts6= parseInt(rows[6].cells[10].innerHTML);
+			var pts7= parseInt(rows[7].cells[10].innerHTML);
+			var pts8= parseInt(rows[8].cells[10].innerHTML);
+			var pts9= parseInt(rows[9].cells[10].innerHTML);
+			var pts10= parseInt(rows[10].cells[10].innerHTML);
+			var pts11= parseInt(rows[11].cells[10].innerHTML);
+			var pts12= parseInt(rows[12].cells[10].innerHTML);
+			
+			
+			// Prepare the data
+			  var data = google.visualization.arrayToDataTable([
+				['Name', 'Puntos logrados'],
+				[nombre , pts],
+				[nombre2, pts2],
+				[nombre3, pts3],
+				[nombre4, pts4],
+				[nombre5, pts5],
+				[nombre6, pts6],
+				[nombre7, pts7],
+				[nombre8, pts8],
+				[nombre9, pts9],
+				[nombre10, pts10],
+				[nombre11, pts11],
+				[nombre12, pts12]
+			  ]);
+
+			   // Create a dashboard.
+        var dashboard = new google.visualization.Dashboard(
+            document.getElementById('dashboard_div'));
+
+        // Create a range slider, passing some options
+        var donutRangeSlider = new google.visualization.ControlWrapper({
+          'controlType': 'NumberRangeFilter',
+          'containerId': 'filter_div',
+          'options': {
+            'filterColumnLabel': 'Puntos logrados'
+          }
+        });
+
+        // Create a pie chart, passing some options
+        var pieChart = new google.visualization.ChartWrapper({
+          'chartType': 'PieChart',
+          'containerId': 'chart_div3',
+          'options': {
+            'width': 600,
+            'height': 300,
+            'pieSliceText': 'value',
+            'legend': 'right'
+          }
+        });
+
+        // Establish dependencies, declaring that 'filter' drives 'pieChart',
+        // so that the pie chart will only display entries that are let through
+        // given the chosen slider range.
+        dashboard.bind(donutRangeSlider, pieChart);
+
+        // Draw the dashboard.
+        dashboard.draw(data);
+
+			
+			
+		}
 	  }
 	  
 	  function terminaCampeonato(){

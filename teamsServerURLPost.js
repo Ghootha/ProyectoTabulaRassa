@@ -1,4 +1,4 @@
-// Simple server with connection to mongodb:/teams
+﻿// Simple server with connection to mongodb:/teams
 // Modules
 var http = require('http');
 var url= require('url');
