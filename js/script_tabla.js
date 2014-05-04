@@ -701,10 +701,11 @@
 	  
 	  
 	  function calculaDatosJornadas(arrayJornadas){
-	  	  
-	  	    var partido, fila1,fila2, resultados,res,result1,result2;
+	  	  debugger;
+	  	    var partido,partidos, fila1,fila2, resultados,res,result1,result2;
+			var i;
 	  	    var filas = document.getElementById("data").rows;
-							for(i in arrayJornadas){
+							for(i=0;i<arrayJornadas.length;i++){
 											partidos=arrayJornadas[i].partidos;
 											for(j in partidos){
 												   partido=partidos[j];

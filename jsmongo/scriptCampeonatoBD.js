@@ -143,7 +143,7 @@ var jornada10={
 	partidos:[ 	{Equipo1:"Belen Siglo XXI", Equipo2: "Deportivo Saprissa", resultado: "1-2"},
 				{Equipo1:"Cartagines", Equipo2: "Perez Zeledon", resultado: "2-2"},
 				{Equipo1:"Alajuelense", Equipo2: "UCR", resultado: "5-2"},
-				{Equipo1:"Puntarenas", Equipo2: "UCR", resultado: "0-2"},
+				{Equipo1:"Puntarenas", Equipo2: "Uruguay", resultado: "0-2"},
 				{Equipo1:"Santos de Guapiles", Equipo2: "Carmelita", resultado: "0-0"},
 				{Equipo1:"Herediano", Equipo2: "Limon", resultado: "2-0"} 
 	] 
@@ -152,7 +152,7 @@ var jornada10={
 var jornada11={
     Numero: 11,
 	partidos:[ 	{Equipo1:"Limon", Equipo2: "Puntarenas", resultado: "0-0"},
-				{Equipo1:"Deportivo Saprissa", Equipo2: "", resultado: "3-0"},
+				{Equipo1:"Deportivo Saprissa", Equipo2: "Cartagines", resultado: "3-0"},
 				{Equipo1:"UCR", Equipo2: "Santos de Guapiles", resultado: "2-1"},
 				{Equipo1:"Perez Zeledon", Equipo2: "Alajuelense", resultado: "2-2"},
 				{Equipo1:"Carmelita", Equipo2: "Herediano", resultado: "2-0"},
@@ -205,7 +205,7 @@ var jornada15={
 };
 var jornada16={
     Numero: 16,
-	partidos:[ 	{Equipo1:"UCR", Equipo2: "Carmelita", resultado: "2-0"},
+	partidos:[ 	{Equipo1:"UCR", Equipo2: "Carmelita", resultado: "0-2"},
 				{Equipo1:"Santos de Guapiles", Equipo2: "Belen Siglo XXI", resultado: "0-1"},
 				{Equipo1:"Cartagines", Equipo2: "Puntarenas", resultado: "0-1"},
 				{Equipo1:"Deportivo Saprissa", Equipo2: "Uruguay", resultado: "2-0"},
@@ -290,6 +290,5 @@ var campeonato={
 	equipos:[csh, lda, saprissa, limon, santos, ucr, cartago, carmen, belen, puerto, uruguay, pz]
 }; 
 	
-
 
 	 
